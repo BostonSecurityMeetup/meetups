@@ -1,6 +1,6 @@
-### BSM Meetup for August 2018
+### BSM Meetup for September 2018
 
-The August BSM was on the 16th. Thanks everyone for coming!
+The September BSM was on the 20th. Thanks everyone for coming!
 
 | Speaker | Talk |
 | --- | --- |
