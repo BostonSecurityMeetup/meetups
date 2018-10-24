@@ -1,0 +1,173 @@
+%section
+  %h1 ChatOps
+  %h3 The Swiss Army Chainsaw of automation
+  by Joseph Henrich
+%section
+  %img.plain(src="https://i.kym-cdn.com/photos/images/original/000/197/143/CthJb.png")
+%section
+  %section
+    %h3 ChatOps is...
+    .fragment Automating things in chat
+    .fragment Oh, and memes. Definitely memes.
+    .fragment But, what does that actually :eyes: like?
+  %section
+    The majority of the examples here are pulled from what my day to day looks like. Happy to discuss what automating other sorts of work might look like.
+  %section
+    %h3 What can you do with ChatOps?
+    %ul
+      %li Resource CRUD
+      %li Config/setup checks
+      %li Single source of truth
+      %li Updates
+      %li Easy interface
+  %section
+    %h3 Resource CRUD
+    .holder(style="position:relative;border:none")
+      %img.plain.fragment.stretch(style="position:absolute;top:0;left:0" align='left' src='images/instance_create.png')
+      %img.plain.fragment.stretch(style="position:absolute;top:0;left:0" align='left' src='images/instance_create2.png')
+      %img.plain.fragment.stretch(style="border-bottom:195px solid #222;position:absolute;top:0;left:0" align='left' src='images/instance_create3.png')
+  %section
+    %h3 Config/setup checks
+    %span :thinking: Am I properly configured to get on the vpn?
+    %img.plain.fragment(src='images/vpn_check.png')
+    %br
+    %h1.fragment :ice_cream: :confetti_ball:
+  %section
+    %h3 Single Source of Truth
+    .fragment You know that pile of scripts you have lying around?
+    %img.plain.fragment(src='images/duo_me.png')
+    .fragment Command line you can never remember the flags for?
+    %img.plain.fragment(src='images/dig.png')
+  %section
+    %h3 I can has updates :hamburger: :smiley_cat:
+    %ul
+      %li.fragment :alarm_clock: Reports on SLA for a SOC
+      %li.fragment Long running task finished :heavy_check_mark:
+      %li.fragment Ticket created/closed
+      %li.fragment :chart_with_downwards_trend: on your favorite data
+  %section
+    %h3 Easy Interface
+    %ul
+      %li.fragment Biking to work... :pager:... No problem!
+      %li.fragment What server is that script on?
+      %li.fragment What environment secrets do I need to run this?
+%section
+  %section
+    %h1 Why bother?
+  %section
+    %ul
+      %li Auditability
+      %li Discoverability
+      %li Teaching
+      %li Automation is your friend
+      %li Consistency
+      %li Secrets, secrets and more secrets
+      %li Community
+  %section
+    %h3 Auditability
+    If everything you do is in chat, it's all recorded right there in one place. You can link directly to where the discussion happened and the commands were run.
+  %section
+    %h3 Discoverability :mag:
+    %img.plain(src='images/slack_search.png')
+  %section
+    %h3 Teaching
+    %img.plain(src='images/rem.png')
+    %img.plain(src='images/ldap_where_is.png')
+  %section
+    %h3 Automation is your friend :robot:
+    If you're going to do it, why not in chat?
+    %br
+    %br
+    %span  :pager: about a host not in vault? :crying_cat_face:
+    %br
+    %img.plain(src='images/vault_register.png')
+  %section
+    %h3 Consistency
+    If everything is automated it's hard to mess it up :crossed_fingers:
+    .fragment It's even harder when you can't fiddle with the script :trollface:
+  %section
+    %h3 Secrets, secrets and more secrets :see_no_evil: :hear_no_evil: :speak_no_evil:
+    .fragment A user can't leak them if they never saw them :lock:
+    .fragment If it's only used in a single place it's easy to roll :fire: :skull: :fire:
+  %section
+    %h3 Community
+    .fragment Have fun, build your own jokes :metal:
+    .fragment Be nice to folks and give :sparkling_heart: for a job well done
+    %img.plain.fragment(src='images/sparkle.png')
+    .fragment You can get people involved right as you are working
+%section
+  %section
+    %h2 That sounds :+1:, but how do you actually do it?
+  %section
+    %h3 "It's all just code"
+    All you need to do is take a chat message as input, do some processing and then output your response.
+  %section
+    %h3 Lots of existing frameworks
+    %ul
+      %li Hubot - Javascript
+      %li Errbot - Python
+      %li Lita - Ruby
+  %section
+    %h3 Single repo vs multiple
+    There are lots of ways to add commands to a chatbot.
+    %br
+    GitHub has 4 :sob:
+    %br
+    For small scale having everything in a single repo is a good place to start.
+
+  %section
+    %h3 RESTful interface, microservices and registration
+    %ul
+      %li But, a single repo can get too big :grimacing:
+      %li Massive repos with no clear owner are :-1:
+      %li GitHub allows services to register with a single :robot:
+      %li Single concern, like a unix tool
+      %li Single :robot: that's in every room
+      %li An issue with a ChatOp doesn't :boom: the :robot:
+%section
+  %section
+    %h3 A few words of warning
+    %ul
+      %li.fragment You will leak secrets into chat
+      %li.fragment(style="list-style-type:none")
+        %img.plain(src='images/this_is_fine.png')
+      %li.fragment Plan for it and you will be ready :muscle:
+      %li.fragment You will need to maintain your ChatOps
+      %li.fragment Start small, take what you have and iterate
+%section
+  %h1 :beers: :wave:
+
+
+
+
+
+
+
+
+/
+  * What
+  ** Automation
+  *** Resource CRUD
+  **** Instances
+  *** Config/setup checks
+  **** vpn
+  ** Single source of truth
+  *** That pile of scripts you have lying around?
+  *** The command line invocation you never get quite right
+  ** Easy interface
+  *** Biking to work and get a page?
+  *** Not sure which server to run the command on?
+  ** Scheduled tasks
+
+  * Why
+  ** Auditability
+  ** Discoverability
+  ** Automation is good, might as well be in chat
+  ** Consistency
+  ** Secrets secrets secrets (Users don't need them)
+
+  * How
+  ** "It's all just code"
+  ** Lots of frameworks
+  ** Single repo vs multiple
+  ** Restful interface and microservices
